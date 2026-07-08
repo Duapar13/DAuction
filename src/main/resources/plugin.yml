@@ -1,0 +1,21 @@
+name: DAuction
+version: '${project.version}'
+main: com.dauction.DAuction
+api-version: '26.1'
+author: Duapar
+description: Hôtel des ventes entre joueurs, lié à EconomyService (DAPI).
+depend: [DAPI]
+
+permissions:
+  dauction.use:
+    description: Autorise à vendre, acheter et consulter l'hôtel des ventes.
+    default: true
+  dauction.admin:
+    description: Autorise à annuler la mise en vente de n'importe quel joueur.
+    default: op
+
+commands:
+  ah:
+    description: Hôtel des ventes entre joueurs.
+    usage: /ah [sell <prix> [quantité]|my|reclaim|cancel <id>|collect <id>|history|help]
+    aliases: [auction, auctionhouse]

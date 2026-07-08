@@ -1,0 +1,43 @@
+# ================================
+# DAuction - Configuration
+# ================================
+
+# Type de stockage : "local" (fichiers YAML) ou "mysql"
+storage:
+  type: local
+
+  mysql:
+    host: localhost
+    port: 3306
+    database: dauction
+    username: root
+    password: ""
+    useSSL: false
+
+listing:
+  # Durée de vie d'une annonce avant expiration.
+  duration-hours: 48
+  # Nombre maximum d'annonces actives en même temps par joueur.
+  max-active-per-player: 5
+  min-price: 1
+  max-price: 1000000
+  # Pourcentage prélevé (non reversé) sur chaque vente conclue.
+  tax-percent: 5
+
+# Objets qu'il est interdit de mettre en vente.
+blacklisted-items:
+  - BEDROCK
+  - COMMAND_BLOCK
+  - CHAIN_COMMAND_BLOCK
+  - REPEATING_COMMAND_BLOCK
+  - BARRIER
+  - STRUCTURE_BLOCK
+  - STRUCTURE_VOID
+  - JIGSAW
+  - SPAWNER
+  - TRIAL_SPAWNER
+
+# Intégration DAPI optionnelle (sans effet si DFaction n'est pas installé)
+integration:
+  # Affiche la faction du vendeur dans le détail d'une annonce, si disponible.
+  show-faction-in-listing: true
