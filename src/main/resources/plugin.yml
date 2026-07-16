@@ -5,6 +5,11 @@ api-version: '26.1'
 author: Duapar
 description: Hôtel des ventes entre joueurs, lié à EconomyService (DAPI).
 depend: [DAPI]
+# softdepend (pas depend: DEconomy n'est pas obligatoire, un autre plugin
+# pourrait fournir EconomyService) : sert uniquement à influencer l'ordre de
+# chargement de Bukkit (alphabétique par défaut, DAuction < DEconomy) pour
+# que EconomyService soit déjà enregistré quand DAuction s'active.
+softdepend: [DEconomy]
 
 permissions:
   dauction.use:

@@ -37,6 +37,15 @@ rien pour transférer l'argent d'un achat, donc pas d'hôtel des ventes
 possible : le plugin se désactive proprement au démarrage si aucun plugin
 d'économie (ex: DEconomy) n'est installé.
 
+`plugin.yml` ajoute aussi `softdepend: [DEconomy]`, uniquement pour
+influencer l'ordre de chargement de Bukkit : sans dépendance explicite
+entre deux plugins, cet ordre n'est pas garanti (ni alphabétique, ni
+stable), et un vrai déploiement a montré DAuction s'activer avant
+DEconomy et se désactiver aussitôt faute d'`EconomyService` enregistré.
+Ce n'est pas une vraie dépendance : un autre plugin fournissant
+`EconomyService` fonctionnerait tout aussi bien, tant qu'il se charge
+avant DAuction.
+
 - **Consomme `EconomyService`** (DEconomy) : `has`/`withdraw`/`deposit` à
   chaque achat, `format` pour l'affichage des prix.
 - **Consomme `FactionService`** (DFaction, optionnel) : affiche la faction
