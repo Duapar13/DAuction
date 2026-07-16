@@ -42,7 +42,7 @@ public class GuiListener implements Listener {
         Player player = (Player) event.getWhoClicked();
         switch (holder.getMode()) {
             case BROWSE:
-                handleBuy(player, listingId);
+                handleBrowseClick(player, listingId);
                 break;
             case MY:
                 handleCancel(player, listingId);
@@ -50,6 +50,25 @@ public class GuiListener implements Listener {
             case RECLAIM:
                 handleCollect(player, listingId);
                 break;
+        }
+    }
+
+    /**
+     * En mode BROWSE, cliquer sur sa propre annonce l'annule (au lieu de tenter un
+     * achat qui échouerait de toute façon avec "Tu ne peux pas acheter ta propre
+     * annonce.") - même comportement que le mode MY, juste accessible sans changer
+     * de GUI.
+     */
+    private void handleBrowseClick(Player player, int id) {
+        try {
+            AuctionListing listing = auctionManager.getActiveOrThrow(id);
+            if (listing.getSellerId().equals(player.getUniqueId())) {
+                handleCancel(player, id);
+            } else {
+                handleBuy(player, id);
+            }
+        } catch (AuctionException e) {
+            Msg.error(player, e.getMessage());
         }
     }
 

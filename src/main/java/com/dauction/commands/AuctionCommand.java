@@ -100,7 +100,7 @@ public class AuctionCommand implements CommandExecutor, TabCompleter {
             return;
         }
         boolean showFaction = plugin.getConfig().getBoolean("integration.show-faction-in-listing", true);
-        Inventory gui = AuctionGuiBuilder.buildBrowseGui(active, auctionManager,
+        Inventory gui = AuctionGuiBuilder.buildBrowseGui(active, auctionManager, player.getUniqueId(),
                 listing -> factionLineFor(listing.getSellerId(), showFaction));
         player.openInventory(gui);
     }

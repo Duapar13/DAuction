@@ -8,6 +8,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.function.Function;
 
 public final class AuctionGuiBuilder {
@@ -15,13 +16,14 @@ public final class AuctionGuiBuilder {
     private AuctionGuiBuilder() {
     }
 
-    public static Inventory buildBrowseGui(List<AuctionListing> listings, AuctionManager manager,
+    public static Inventory buildBrowseGui(List<AuctionListing> listings, AuctionManager manager, UUID viewerId,
                                             Function<AuctionListing, String> factionLineProvider) {
         AuctionGuiHolder holder = new AuctionGuiHolder(AuctionGuiHolder.Mode.BROWSE);
         Inventory inventory = Bukkit.createInventory(holder, 54, ChatColor.DARK_PURPLE + "Hôtel des ventes");
         holder.setInventory(inventory);
         fill(inventory, holder, listings, 54,
-                listing -> AuctionItemFactory.buildBrowseItem(listing, manager, factionLineProvider.apply(listing)));
+                listing -> AuctionItemFactory.buildBrowseItem(listing, manager, factionLineProvider.apply(listing),
+                        listing.getSellerId().equals(viewerId)));
         return inventory;
     }
 

@@ -8,7 +8,9 @@ dans le compte du vendeur, même hors ligne.
 ## Fonctionnalités
 
 - **`/ah`** : parcourt toutes les annonces actives en GUI (tête d'objet,
-  vendeur, prix, temps restant). Clique pour acheter.
+  vendeur, prix, temps restant). Clique pour acheter — ou pour annuler
+  directement si c'est ta propre annonce (marquée "(toi)"), sans passer par
+  `/ah my`.
 - **`/ah sell <prix> [quantité]`** : met en vente l'objet tenu en main (toute
   la pile, ou une partie si une quantité est précisée).
 - **`/ah my`** : GUI de tes propres annonces actives — clique pour annuler.

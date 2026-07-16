@@ -16,20 +16,20 @@ final class AuctionItemFactory {
     private AuctionItemFactory() {
     }
 
-    static ItemStack buildBrowseItem(AuctionListing listing, AuctionManager manager, String factionLine) {
-        return decorate(listing, manager, factionLine, true, false);
+    static ItemStack buildBrowseItem(AuctionListing listing, AuctionManager manager, String factionLine, boolean own) {
+        return decorate(listing, manager, factionLine, true, false, own);
     }
 
     static ItemStack buildMyItem(AuctionListing listing, AuctionManager manager) {
-        return decorate(listing, manager, null, false, false);
+        return decorate(listing, manager, null, false, false, false);
     }
 
     static ItemStack buildReclaimItem(AuctionListing listing, AuctionManager manager) {
-        return decorate(listing, manager, null, false, true);
+        return decorate(listing, manager, null, false, true, false);
     }
 
     private static ItemStack decorate(AuctionListing listing, AuctionManager manager, String factionLine,
-                                       boolean browsing, boolean reclaiming) {
+                                       boolean browsing, boolean reclaiming, boolean own) {
         ItemStack display = listing.getItem().clone();
         ItemMeta meta = display.getItemMeta();
 
@@ -40,7 +40,8 @@ final class AuctionItemFactory {
         }
         lore.add(ChatColor.DARK_GRAY + "Annonce #" + listing.getId());
         if (browsing) {
-            lore.add(ChatColor.GRAY + "Vendeur: " + ChatColor.WHITE + listing.getSellerName());
+            lore.add(ChatColor.GRAY + "Vendeur: " + ChatColor.WHITE + listing.getSellerName()
+                    + (own ? ChatColor.AQUA + " (toi)" : ""));
             if (factionLine != null) {
                 lore.add(ChatColor.GRAY + factionLine);
             }
@@ -57,7 +58,11 @@ final class AuctionItemFactory {
             long remaining = listing.getExpiresAt() - System.currentTimeMillis();
             lore.add(ChatColor.GRAY + "Expire dans: " + ChatColor.WHITE + TimeFormat.remaining(remaining));
             lore.add("");
-            lore.add(browsing ? ChatColor.GREEN + "Clique pour acheter." : ChatColor.RED + "Clique pour annuler.");
+            if (browsing) {
+                lore.add(own ? ChatColor.RED + "Clique pour annuler ta mise en vente." : ChatColor.GREEN + "Clique pour acheter.");
+            } else {
+                lore.add(ChatColor.RED + "Clique pour annuler.");
+            }
         }
 
         meta.setLore(lore);
