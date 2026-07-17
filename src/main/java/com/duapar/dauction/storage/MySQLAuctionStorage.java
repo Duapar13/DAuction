@@ -1,7 +1,7 @@
-package com.dauction.storage;
+package com.duapar.dauction.storage;
 
-import com.dauction.model.AuctionListing;
-import com.dauction.model.AuctionStatus;
+import com.duapar.dauction.model.AuctionListing;
+import com.duapar.dauction.model.AuctionStatus;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;

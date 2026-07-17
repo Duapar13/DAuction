@@ -1,6 +1,6 @@
-package com.dauction.storage;
+package com.duapar.dauction.storage;
 
-import com.dauction.model.AuctionListing;
+import com.duapar.dauction.model.AuctionListing;
 
 import java.util.Map;
 

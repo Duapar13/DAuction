@@ -1,7 +1,7 @@
-package com.dauction.gui;
+package com.duapar.dauction.gui;
 
-import com.dauction.manager.AuctionManager;
-import com.dauction.model.AuctionListing;
+import com.duapar.dauction.manager.AuctionManager;
+import com.duapar.dauction.model.AuctionListing;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.inventory.Inventory;

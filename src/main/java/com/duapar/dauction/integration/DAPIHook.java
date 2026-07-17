@@ -1,10 +1,10 @@
-package com.dauction.integration;
+package com.duapar.dauction.integration;
 
-import com.dapi.DAPI;
-import com.dapi.service.AuctionService;
-import com.dapi.service.FactionService;
-import com.dauction.manager.AuctionManager;
-import com.dauction.service.DAuctionServiceImpl;
+import com.duapar.dapi.DAPI;
+import com.duapar.dapi.service.AuctionService;
+import com.duapar.dapi.service.FactionService;
+import com.duapar.dauction.manager.AuctionManager;
+import com.duapar.dauction.service.DAuctionServiceImpl;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.UUID;

@@ -7,5 +7,5 @@ la procédure une fois sur cette machine, rien à refaire ici.
 Sinon, voir `DFaction/libs/README.md` pour la procédure complète (BuildTools
 + extraction + `mvn install:install-file`).
 
-Ce projet dépend aussi de `com.dapi:DAPI:1.0.0` (dépendance dure) : fais
+Ce projet dépend aussi de `com.duapar.dapi:DAPI:1.0.0` (dépendance dure) : fais
 `mvn install` dans le dossier `DAPI` avant de compiler DAuction.

@@ -1,6 +1,6 @@
 name: DAuction
 version: '${project.version}'
-main: com.dauction.DAuction
+main: com.duapar.dauction.DAuction
 api-version: '26.1'
 author: Duapar
 description: Hôtel des ventes entre joueurs, lié à EconomyService (DAPI).

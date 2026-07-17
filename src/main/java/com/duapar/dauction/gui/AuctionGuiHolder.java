@@ -1,4 +1,4 @@
-package com.dauction.gui;
+package com.duapar.dauction.gui;
 
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;

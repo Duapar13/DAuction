@@ -1,4 +1,4 @@
-package com.dauction.model;
+package com.duapar.dauction.model;
 
 public enum AuctionStatus {
     /** Toujours en vente, visible dans le browse. */

@@ -1,15 +1,15 @@
-package com.dauction;
+package com.duapar.dauction;
 
-import com.dapi.DAPI;
-import com.dapi.service.EconomyService;
-import com.dauction.commands.AuctionCommand;
-import com.dauction.gui.GuiListener;
-import com.dauction.integration.DAPIHook;
-import com.dauction.manager.AuctionManager;
-import com.dauction.storage.AuctionStorage;
-import com.dauction.storage.MySQLAuctionStorage;
-import com.dauction.storage.YamlAuctionStorage;
-import com.dauction.tasks.ExpirationTask;
+import com.duapar.dapi.DAPI;
+import com.duapar.dapi.service.EconomyService;
+import com.duapar.dauction.commands.AuctionCommand;
+import com.duapar.dauction.gui.GuiListener;
+import com.duapar.dauction.integration.DAPIHook;
+import com.duapar.dauction.manager.AuctionManager;
+import com.duapar.dauction.storage.AuctionStorage;
+import com.duapar.dauction.storage.MySQLAuctionStorage;
+import com.duapar.dauction.storage.YamlAuctionStorage;
+import com.duapar.dauction.tasks.ExpirationTask;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 

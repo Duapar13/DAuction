@@ -1,13 +1,13 @@
-package com.dauction.commands;
+package com.duapar.dauction.commands;
 
-import com.dauction.gui.AuctionGuiBuilder;
-import com.dauction.integration.DAPIHook;
-import com.dauction.manager.AuctionException;
-import com.dauction.manager.AuctionManager;
-import com.dauction.model.AuctionListing;
-import com.dauction.model.AuctionStatus;
-import com.dauction.util.Display;
-import com.dauction.util.Msg;
+import com.duapar.dauction.gui.AuctionGuiBuilder;
+import com.duapar.dauction.integration.DAPIHook;
+import com.duapar.dauction.manager.AuctionException;
+import com.duapar.dauction.manager.AuctionManager;
+import com.duapar.dauction.model.AuctionListing;
+import com.duapar.dauction.model.AuctionStatus;
+import com.duapar.dauction.util.Display;
+import com.duapar.dauction.util.Msg;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

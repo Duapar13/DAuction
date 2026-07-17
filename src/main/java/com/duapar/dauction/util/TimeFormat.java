@@ -1,4 +1,4 @@
-package com.dauction.util;
+package com.duapar.dauction.util;
 
 public final class TimeFormat {
 

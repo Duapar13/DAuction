@@ -1,10 +1,10 @@
-package com.dauction.gui;
+package com.duapar.dauction.gui;
 
-import com.dauction.manager.AuctionException;
-import com.dauction.manager.AuctionManager;
-import com.dauction.model.AuctionListing;
-import com.dauction.util.Display;
-import com.dauction.util.Msg;
+import com.duapar.dauction.manager.AuctionException;
+import com.duapar.dauction.manager.AuctionManager;
+import com.duapar.dauction.model.AuctionListing;
+import com.duapar.dauction.util.Display;
+import com.duapar.dauction.util.Msg;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

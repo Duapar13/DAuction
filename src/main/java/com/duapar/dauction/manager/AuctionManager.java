@@ -1,9 +1,9 @@
-package com.dauction.manager;
+package com.duapar.dauction.manager;
 
-import com.dapi.service.EconomyService;
-import com.dauction.model.AuctionListing;
-import com.dauction.model.AuctionStatus;
-import com.dauction.storage.AuctionStorage;
+import com.duapar.dapi.service.EconomyService;
+import com.duapar.dauction.model.AuctionListing;
+import com.duapar.dauction.model.AuctionStatus;
+import com.duapar.dauction.storage.AuctionStorage;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;

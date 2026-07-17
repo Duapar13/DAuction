@@ -1,8 +1,8 @@
-package com.dauction.tasks;
+package com.duapar.dauction.tasks;
 
-import com.dauction.manager.AuctionManager;
-import com.dauction.util.Display;
-import com.dauction.util.Msg;
+import com.duapar.dauction.manager.AuctionManager;
+import com.duapar.dauction.util.Display;
+import com.duapar.dauction.util.Msg;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;

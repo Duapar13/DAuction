@@ -1,4 +1,4 @@
-package com.dauction.manager;
+package com.duapar.dauction.manager;
 
 /**
  * Erreur "attendue" (mauvais usage, solde insuffisant, annonce introuvable...) destinée

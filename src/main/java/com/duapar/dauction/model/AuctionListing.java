@@ -1,4 +1,4 @@
-package com.dauction.model;
+package com.duapar.dauction.model;
 
 import org.bukkit.inventory.ItemStack;
 

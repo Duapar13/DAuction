@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dauction</groupId>
+    <groupId>com.duapar.dauction</groupId>
     <artifactId>DAuction</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
@@ -28,7 +28,7 @@
              il n'y a rien à acheter/vendre. Nécessite "mvn install" sur le projet
              DAPI au moins une fois localement. -->
         <dependency>
-            <groupId>com.dapi</groupId>
+            <groupId>com.duapar.dapi</groupId>
             <artifactId>DAPI</artifactId>
             <version>1.0.0</version>
             <scope>provided</scope>
@@ -74,7 +74,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>com.mysql</pattern>
-                                    <shadedPattern>com.dauction.libs.mysql</shadedPattern>
+                                    <shadedPattern>com.duapar.dauction.libs.mysql</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>

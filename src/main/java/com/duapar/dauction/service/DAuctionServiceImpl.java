@@ -1,7 +1,7 @@
-package com.dauction.service;
+package com.duapar.dauction.service;
 
-import com.dapi.service.AuctionService;
-import com.dauction.manager.AuctionManager;
+import com.duapar.dapi.service.AuctionService;
+import com.duapar.dauction.manager.AuctionManager;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.UUID;
